@@ -39,14 +39,14 @@ install(DIRECTORY include/NamedType
 
 configure_package_config_file(cmake/${PROJECT_NAME}Config.cmake.in
         "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
-        INSTALL_DESTINATION lib/cmake/)
+        INSTALL_DESTINATION lib/cmake/NamedType/)
 
 write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
                                  VERSION ${${PROJECT_NAME}_VERSION}
                                  COMPATIBILITY AnyNewerVersion)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
               ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
-        DESTINATION lib/cmake/)
+              DESTINATION lib/cmake/NamedType/)
 install(EXPORT ${PROJECT_NAME}Targets
         FILE ${PROJECT_NAME}Targets.cmake
-        DESTINATION lib/cmake/)
+        DESTINATION lib/cmake/NamedType/)
